@@ -1,6 +1,16 @@
 import sys
 import math
 
+def recursive_fuel(fuel):
+    total = 0
+    while (fuel > 0):
+        fuel = calc_fuel(fuel)
+        if (fuel > 0):
+            total += fuel
+
+    return total
+
+
 def calc_fuel(mass):
     fuel = math.floor(mass / 3) - 2
 
@@ -21,12 +31,12 @@ def read_input():
 def main ():
     modules = read_input()
 
-    print(modules)
-
     total = 0
     for m in modules:
-        fuel = calc_fuel(int(m[0]))
+        fuel = recursive_fuel(int(m[0]))
         total += fuel
+
+    # total += recursive_fuel(total)
 
     print(total)
 

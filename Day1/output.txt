@@ -1,0 +1,7 @@
+output for p1:
+correct: 3,394,106
+
+output for p2:
+wrong (low): 1697008
+wrong (high): 5,091,114
+correct! 5,088,280
