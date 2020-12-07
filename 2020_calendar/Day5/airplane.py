@@ -37,10 +37,22 @@ def find_max_seat_id(tickets):
             max = id
     return max
 
+def find_my_seat(tickets):
+    seat_list = []
+    for t in tickets:
+        seat_list.append(calc_seat_id(t))
+    seat_list.sort()
+    i = seat_list[0]
+    for s in seat_list:
+        if s != i:
+            return i
+        else:
+            i += 1
 
 def main():
     tickets = read_input()
     # print(calc_seat_id('FBFBBFFRLR'))
     print(find_max_seat_id(tickets))
+    print(find_my_seat(tickets))
 
 main()
