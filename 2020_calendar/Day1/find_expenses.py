@@ -21,7 +21,7 @@ def find_2020_nums(expenses, add_search):
     for num_1 in expenses:
          less_than = add_search - num_1
          for num_2 in expenses:
-             # try to reduce to computations that could possibily be add_search
+             # try to reduce to computations that could possibly be add_search
              if (num_2 <= less_than):
                  if num_1 + num_2 == add_search:
                      return (num_1, num_2)

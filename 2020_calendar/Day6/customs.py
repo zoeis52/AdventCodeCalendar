@@ -18,7 +18,7 @@ def read_input_anyone():
     return lines
 
 def read_input_everyone():
-    "reads in the command line file and converts to a list of ints"
+    "reads in the command line file"
     fileName = sys.argv[1]
 
     lines = []
